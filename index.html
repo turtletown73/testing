@@ -5,7 +5,7 @@
 
   <script>
     document.getElementById("button").onclick = function() {
-      var window = window.open();
+      var windowThing = window.open();
       var body = document.createElement("body");
       var iframe = document.createElement("iframe")
 
@@ -15,7 +15,7 @@
       body.style = "margin: 0px; height: 100vh;"
       body.appendChild(iframe)
       
-      window.document.body = body
+      windowThing.document.body = body
     };
   </script>
 </html>
