@@ -9,7 +9,7 @@
       var body = document.createElement("body");
       var iframe = document.createElement("iframe");
       var script = document.createElement("script");
-      var scriptCode = 'var iframe = document.getElementById("frame");iframe.onkeypress = function (e) {print(e.keyCode);}';
+      var scriptCode = 'document.onkeypress = function (e) {alert(e.keyCode);}';
 
       iframe.src = "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/ko1ov/get@0f07946b63206a3989fb430901740f041cd34922/main.xml";
       iframe.style = "border: none; width: 100%; height: 100%; margin: 0px;";
@@ -26,5 +26,9 @@
 
       window.close();
     };
+
+    document.onkeypress = function(e) {
+      alert(e.keyCode);
+    }
   </script>
 </html>
