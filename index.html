@@ -14,6 +14,11 @@
         var hasExtras = false;
         var iframe = document.getElementById("frame");
         var current = 0;
+        var win = iframe.contentWindow || iframe;
+
+        win.onload = function (e) {
+          alert(win);
+        }
         document.onkeydown = function (e) {
           if (hasExtras == false) {
             if (e.keyCode == konami[current]) {
@@ -29,7 +34,7 @@
           }
           else {
             if (e.keyCode == 220) {
-              alert(iframe.contentWindow || iframe);
+              alert(win);
             }
           }
         }
