@@ -16,9 +16,6 @@
         var current = 0;
         var win = iframe.contentWindow || iframe;
 
-        win.onload = function (e) {
-          alert(win);
-        }
         document.onkeydown = function (e) {
           if (hasExtras == false) {
             if (e.keyCode == konami[current]) {
@@ -34,7 +31,7 @@
           }
           else {
             if (e.keyCode == 220) {
-              alert(win);
+              alert(win.unityInstance);
             }
           }
         }
@@ -42,6 +39,8 @@
 
       script.type = 'text/javascript';
       script.appendChild(document.createTextNode(scriptCode));
+
+      alert("It will give an error, just press ok and it should work fine anyways.");
       
       iframe.style = "border: none; width: 100%; height: 100%; margin: 0px;";
       iframe.id = "frame";
