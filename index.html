@@ -10,13 +10,23 @@
       var iframe = document.createElement("iframe");
       var script = document.createElement("script");
       var scriptCode = `
-      var konami = [];
-      document.onkeypress = function (e) {
-        if (e.keyCode == 92) {
-          alert("TESTING");
+        var konami = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+        var hasExtras = false;
+        var current = 0;
+        document.onkeydown = function (e) {
+          if (hasExtras == false) {
+            if (e.keyCode == konami[current]) {
+              current++;
+              if (current == 10) {
+                hasExtras = true;
+                alert('"extras" enabled!');
+              }
+            }
+            else {
+              current = 0;
+            }
+          }
         }
-        alert(e.keyCode);
-      }
       `;
 
       iframe.src = "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/ko1ov/get@0f07946b63206a3989fb430901740f041cd34922/main.xml";
