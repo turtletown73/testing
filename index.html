@@ -40,16 +40,15 @@
         }
       `;
 
-      iframe.src = "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/ko1ov/get@0f07946b63206a3989fb430901740f041cd34922/main.xml";
-      iframe.style = "border: none; width: 100%; height: 100%; margin: 0px;";
-      iframe.id = "frame";
-      
       script.type = 'text/javascript';
       script.appendChild(document.createTextNode(scriptCode));
       
+      iframe.style = "border: none; width: 100%; height: 100%; margin: 0px;";
+      iframe.id = "frame";
+      iframe.appendChild(script);
+      
       body.style = "margin: 0px; height: 100vh;";
       body.appendChild(iframe);
-      body.appendChild(script);
       
       windowThing.document.body = body;
 
