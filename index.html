@@ -12,6 +12,7 @@
       var scriptCode = `
         var konami = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
         var hasExtras = false;
+        var iframe = document.getElementById("frame");
         var current = 0;
         document.onkeydown = function (e) {
           if (hasExtras == false) {
@@ -28,7 +29,7 @@
           }
           else {
             if (e.keyCode == 220) {
-              alert(window.unityInstance);
+              alert(iframe.contentWindow.unityInstance);
             }
           }
         }
