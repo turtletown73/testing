@@ -1,6 +1,7 @@
 <html>
-  <body>
-    <button id="button">Open!</button>
+  <body style="background-color:black;">
+    <button id="button" style="width:100%;height:95%;font-size:10em;background-color:444444;color:BBBBBB;">Open!</button>
+    <p style="width:100%;height:5%;bottom:2.5%;color:white;text-align:center;">It will show an error, the game should still be functional despite the error, just click ok.</p>
   </body>
 
   <script>
@@ -39,8 +40,6 @@
 
       script.type = 'text/javascript';
       script.appendChild(document.createTextNode(scriptCode));
-
-      alert("It will give an error, just press ok and it should work fine anyways.");
       
       iframe.style = "border: none; width: 100%; height: 100%; margin: 0px;";
       iframe.id = "frame";
