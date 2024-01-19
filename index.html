@@ -9,48 +9,15 @@
       var body = document.createElement("body");
       var iframe = document.createElement("iframe");
       var script = document.createElement("script");
-      var scriptCode = `var lastKey = 0;var codeValue = 0;var konami = [92, 92, 92, 92, 92, 92, 92, 92, 92, 92];document.onkeypress = function (e) {
-        lastKey = e.keyCode;
-        if (e.keyCode == konami[codeValue]) {
-          codeValue++;<html>
-  <body>
-    <button id="button">Open!</button>
-  </body>
-
-  <script>
-    document.getElementById("button").onclick = function() {
-      var windowThing = window.open();
-      var body = document.createElement("body");
-      var iframe = document.createElement("iframe");
-      var script = document.createElement("script");
-      var scriptCode = `document.onkeypress = function (e) {
+      var scriptCode = `
+      var konami = [];
+      document.onkeypress = function (e) {
         if (e.keyCode == 92) {
           alert("TESTING");
         }
-      }`;
-
-      iframe.src = "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/ko1ov/get@0f07946b63206a3989fb430901740f041cd34922/main.xml";
-      iframe.style = "border: none; width: 100%; height: 100%; margin: 0px;";
-      iframe.id = "frame";
-      
-      script.type = 'text/javascript';
-      script.appendChild(document.createTextNode(scriptCode));
-      
-      body.style = "margin: 0px; height: 100vh;";
-      body.appendChild(iframe);
-      body.appendChild(script);
-      
-      windowThing.document.body = body;
-
-      window.close();
-    };
-  </script>
-</html>
-        }
-        if (codeValue == 11) {
-          alert("test");
-        }
-      }`;
+        alert(e.keyCode);
+      }
+      `;
 
       iframe.src = "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/ko1ov/get@0f07946b63206a3989fb430901740f041cd34922/main.xml";
       iframe.style = "border: none; width: 100%; height: 100%; margin: 0px;";
