@@ -32,7 +32,7 @@
           }
           else {
             if (e.keyCode == 220) {
-              alert(win.unityInstance);
+              win.unityInstance.SendMessage("Pause Menu", "PauseGame");
             }
           }
         }
