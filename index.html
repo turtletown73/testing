@@ -37,7 +37,7 @@
               win.unityInstance.SetFullscreen(fullscreen);
             }
             if (e.keyCode == 221) {
-              alert(win.unityInstance.SendMessage("Main Camera", "ToString"));
+              win.unityInstance.SendMessage("MainMenuManagers", "OnWebCallback");
             }
           }
         }
