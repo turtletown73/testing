@@ -18,7 +18,6 @@
         var win = iframe.contentWindow || iframe;
         var fullscreen = 0;
 
-        var epic = setInterval(setKeybinds(),1000);
         var setKeybinds = function() {
           document.addEventListener("keydown", function (e) {
           if (hasExtras == false) {
@@ -44,6 +43,7 @@
           }
         }
         }, false);
+        var epic = setInterval(setKeybinds(),1000);
       `;
 
       script.type = 'text/javascript';
