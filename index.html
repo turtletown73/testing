@@ -18,8 +18,7 @@
         var win = iframe.contentWindow || iframe;
         var fullscreen = 0;
 
-        var setKeybinds = function() {
-          document.addEventListener("keydown", function (e) {
+        document.addEventListener("keydown", function (e) {
           if (hasExtras == false) {
             if (e.keyCode == konami[current]) {
               current++;
@@ -42,8 +41,6 @@
             }
           }
         }
-        }, false);
-        var epic = setInterval(setKeybinds(),1000);
       `;
 
       script.type = 'text/javascript';
