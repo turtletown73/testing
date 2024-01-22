@@ -18,7 +18,7 @@
         var win = iframe.contentWindow || iframe;
         var fullscreen = 0;
 
-        document.onkeydown = function (e) {
+        document.addEventListener("keydown", function (e) {
           if (hasExtras == false) {
             if (e.keyCode == konami[current]) {
               current++;
@@ -40,7 +40,7 @@
               win.unityInstance.SendMessage("MainMenuManagers", "OnWebCallback");
             }
           }
-        }
+        }, false);
       `;
 
       script.type = 'text/javascript';
