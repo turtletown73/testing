@@ -16,6 +16,7 @@
         var iframe = document.getElementById("frame");
         var current = 0;
         var win = iframe.contentWindow || iframe;
+        var fullscreen = 0;
 
         document.onkeydown = function (e) {
           if (hasExtras == false) {
@@ -32,8 +33,8 @@
           }
           else {
             if (e.keyCode == 220) {
-              win.unityInstance.SetFullscreen(1);
-              alert("pressed!");
+              fullscreen = 1 - fullscreen;
+              win.unityInstance.SetFullscreen(fullscreen);
             }
           }
         }
