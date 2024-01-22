@@ -11,10 +11,9 @@
     var current = 0;
 
     document.onkeydown = function (e) {
-      if (hasExtras == false) {
         if (e.keyCode == konami[current]) {
           current++;
-          if (current == 10) {
+          if (current == konami.length) {
             extras = true;
             alert('"extras" enabled!');
           }
@@ -22,7 +21,6 @@
         else {
           current = 0;
         }
-      }
     }
     
     document.getElementById("button").onclick = function() {
