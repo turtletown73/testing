@@ -18,7 +18,7 @@
         var win = iframe.contentWindow || iframe;
         var fullscreen = 0;
 
-        document.addEventListener("keydown", function (e) {
+        document.onkeydown = function (e) {
           if (hasExtras == false) {
             if (e.keyCode == konami[current]) {
               current++;
