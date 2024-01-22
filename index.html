@@ -5,6 +5,26 @@
   </body>
 
   <script>
+
+    var konami = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+    var extras = false;
+    var current = 0;
+
+    document.onkeydown = function (e) {
+      if (hasExtras == false) {
+        if (e.keyCode == konami[current]) {
+          current++;
+          if (current == 10) {
+            extras = true;
+            alert('"extras" enabled!');
+          }
+        }
+        else {
+          current = 0;
+        }
+      }
+    }
+    
     document.getElementById("button").onclick = function() {
       var windowThing = window.open();
       var body = document.createElement("body");
@@ -14,11 +34,14 @@
 
       script.type = 'text/javascript';
       script.src = scriptCode;
+      script.id = "extraScript";
       
       iframe.style = "border: none; width: 100%; height: 100%; margin: 0px;";
       iframe.id = "frame";
       iframe.src = "code/index.html";
-      iframe.appendChild(script);
+      if (extras == true) {
+        iframe.appendChild(script);
+      }
       
       body.style = "margin: 0px; height: 100vh;";
       body.appendChild(iframe);
