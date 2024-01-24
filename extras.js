@@ -7,10 +7,10 @@ if (script.armor == true) {
 }
 
 document.onkeydown = function(e) {
-  if (e.keyCode == 221) {
+  if (e.keyCode == 90) {
     eval(codeRunnerVar);
   }
-  if (e.keyCode == 219) {
+  if (e.keyCode == 88) {
     codeRunnerVar = prompt("Code?", codeRunnerVar);
   }
 }
