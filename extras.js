@@ -1,9 +1,11 @@
 var script = document.getElementById("extraScript");
 var iframe = script.parentElement;
+var windowThing = null;
+var gameInstance = null;
 
 iframe.onload = function () {
-  var windowThing = iframe.contentWindow;
-  var gameInstance = windowThing.unityInstance;
+  windowThing = iframe.contentWindow;
+  gameInstance = windowThing.unityInstance;
 }
 
 alert("Launched With Extras!");
