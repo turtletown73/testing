@@ -1,7 +1,10 @@
 var script = document.getElementById("extraScript");
 var iframe = script.parentElement;
-var windowThing = iframe.contentWindow;
-var gameInstance = windowThing.unityInstance;
+
+iframe.onload = function () {
+  var windowThing = iframe.contentWindow;
+  var gameInstance = windowThing.unityInstance;
+}
 
 alert("Launched With Extras!");
 if (script.armor == true) {
@@ -10,6 +13,6 @@ if (script.armor == true) {
 
 document.addEventListener("keydown", function(e) {
   if (e.keyCode == 13) {
-    alert(JSON.stringify(iframe));
+    alert(windowThing);
   }
 }, false);
