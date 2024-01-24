@@ -8,7 +8,7 @@ if (script.armor == true) {
   alert("With Infinite Armor!");
 }
 
-windowThing.document.onkeypress = function(e) {
+windowThing.document.onkeydown = function(e) {
   if (e.keyCode == 220) {
     alert(JSON.stringify(gameInstance));
   }
