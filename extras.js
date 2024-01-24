@@ -1,4 +1,5 @@
 var script = document.getElementById("extraScript");
+var codeRunnerVar = "alert(JSON.stringify(script.parentElement.contentWindow.unityInstance));";
 
 alert("Launched With Extras!");
 if (script.armor == true) {
@@ -6,7 +7,10 @@ if (script.armor == true) {
 }
 
 document.addEventListener("keydown", function(e) {
-  if (e.keyCode == 13) {
-    alert(JSON.stringify(script.parentElement.contentWindow.unityInstance[0]));
+  if (e.keyCode == 221) {
+    eval(codeRunnerVar);
+  }
+  if (e.keyCode == 219) {
+    codeRunnerVar = prompt("Code?", codeRunnerVar);
   }
 }, false);
