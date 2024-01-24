@@ -7,6 +7,6 @@ if (script.armor == true) {
 
 document.addEventListener("keydown", function(e) {
   if (e.keyCode == 13) {
-    alert(script.parentElement.contentWindow.unityInstance);
+    alert(JSON.stringify(script.parentElement.contentWindow.unityInstance));
   }
 }, false);
