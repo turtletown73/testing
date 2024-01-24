@@ -779,7 +779,7 @@ gadgets.config.init({"core.io":{"jsonProxyUrl":"//%host%/gadgets/makeRequest","p
   
     
   </head><body dir="ltr"><script src="js/TemplateData-UnityProgress.js"></script><script src="js/get@10bd79d469ef43ac273729a1a8b1161b1459d58f-UnityLoader.js"></script><script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "./get.json", {onProgress: UnityProgress,Module:{onRuntimeInitialized: function() {UnityProgress(gameInstance, "complete")}}});
+      var gameInstance = UnityLoader.instantiate("gameContainer", "/get.json", {onProgress: UnityProgress,Module:{onRuntimeInitialized: function() {UnityProgress(gameInstance, "complete")}}});
     </script>
     <div class="webgl-content">
       <div id="gameContainer" style="width: 100vw; height: 100vh"></div>
