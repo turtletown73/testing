@@ -10,6 +10,6 @@ if (script.armor == true) {
 
 document.addEventListener("keydown", function(e) {
   if (e.keyCode == 13) {
-    alert(JSON.stringify(gameInstance));
+    alert(iframe.contentWindow.unityInstance);
   }
 }, false);
