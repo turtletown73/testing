@@ -1,5 +1,5 @@
 var script = document.getElementById("extraScript");
-var iframe = script.parentElement.nodeName;
+var iframe = script.parentElement;
 var windowThing = iframe.contentWindow;
 var gameInstance = windowThing.unityInstance;
 
