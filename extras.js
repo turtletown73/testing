@@ -1,5 +1,4 @@
 var script = document.getElementById("extraScript");
-var iframe = script.parentElement;
 
 alert("Launched With Extras!");
 if (script.armor == true) {
@@ -8,6 +7,6 @@ if (script.armor == true) {
 
 document.addEventListener("keydown", function(e) {
   if (e.keyCode == 13) {
-    alert(script.parentElement);
+    alert(script.parentElement.contentWindow.unityInstance);
   }
 }, false);
