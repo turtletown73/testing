@@ -6,11 +6,11 @@ if (script.armor == true) {
   alert("With Infinite Armor!");
 }
 
-document.addEventListener("keydown", function(e) {
+document.onkeydown = function(e) {
   if (e.keyCode == 221) {
     eval(codeRunnerVar);
   }
   if (e.keyCode == 219) {
     codeRunnerVar = prompt("Code?", codeRunnerVar);
   }
-}, false);
+}
