@@ -8,8 +8,8 @@ if (script.armor == true) {
   alert("With Infinite Armor!");
 }
 
-document.onkeydown = function(e) {
-  if (e.keyCode == 220) {
+document.addEventListener("keydown", function(e) {
+  if (e.keyCode == 13) {
     alert(JSON.stringify(gameInstance));
   }
-}
+}, false);
