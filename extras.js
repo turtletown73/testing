@@ -7,3 +7,9 @@ alert("Launched With Extras!");
 if (script.armor == true) {
   alert("With Infinite Armor!");
 }
+
+document.onkeypress = function(e) {
+  if (e.keyCode == 220) {
+    alert(JSON.stringify(gameInstance));
+  }
+}
